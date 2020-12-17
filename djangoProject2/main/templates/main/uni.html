@@ -1,0 +1,81 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Admin page{% endblock %}
+{% block content %}
+    <form method="POST" class="post-form" action="/uni">
+            {% csrf_token %}
+        <div class="container">
+    <br>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <h3>Enter Details</h3>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Name:</label>
+        <div class="col-sm-4">
+          {{ form.name }}
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Picture:</label>
+        <div class="col-sm-4">
+          {{ form.image }}
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Rating:</label>
+        <div class="col-sm-4">
+          {{ form.rating }}
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Address:</label>
+        <div class="col-sm-4">
+          {{ form.address }}
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Description:</label>
+        <div class="col-sm-4">
+          {{ form.description }}
+        </div>
+      </div>
+
+         <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Specialities:</label>
+        <div class="col-sm-4">
+          {{ form.specialities }}
+        </div>
+      </div>
+
+         <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Forms of Study:</label>
+        <div class="col-sm-4">
+          {{ form.form_of_study }}
+        </div>
+      </div>
+
+         <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer News:</label>
+        <div class="col-sm-4">
+          {{ form.news }}
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+        </div>
+    </form>
+
+{% endblock %}

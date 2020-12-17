@@ -1,0 +1,91 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Main{% endblock %}
+    {% block content %}
+
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+              <h1 class="display-4 font-italic ">Do you want to go to the University of your dreams?</h1>
+              <p class="lead my-3">Then I'll be happy to help you find it!</p>
+              <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">I hope you find what you're looking for.</a></p>
+            </div>
+          </div>
+
+        <div class = "row">
+            <div class="col-md-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">4.3</strong>
+                        <h3 class="mb-0">IITU</h3>
+                            <div class="mb-1 text-muted">Since 2009</div>
+                        <p class="card-text mb-auto">The international University of information technologies is a leading higher education institution in the Central Asian region in the field of training qualified, internationally recognized IT specialists.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success">4.2</strong>
+                  <h3 class="mb-0">UIB</h3>
+                  <div class="mb-1 text-muted">Since 1992</div>
+                  <p class="mb-auto">Specialized humanitarian and economic University in Almaty, which trains specialists in management and marketing, Finance and accounting, Economics and international relations, ecology and tourism.</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search University by name" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        <br/>
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Form of study</label>
+            <select class="custom-select d-block w-100" id="form-of-study" required="">
+              <option value="">Choose...</option>
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Distance</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">Location of University</label>
+            <select class="custom-select d-block w-100" id="location" required="">
+              <option value="">Choose...</option>
+              <option>Almaty</option>
+              <option>Astana</option>
+              <option>Karaganda</option>
+              <option>Shymkent</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid location.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">UNT points</label>
+            <input type="text" class="form-control" id="zip" placeholder="Points" required="">
+            <div class="invalid-feedback">
+              Your UNT points.
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+    {% endblock %}

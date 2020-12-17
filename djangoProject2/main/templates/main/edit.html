@@ -1,0 +1,79 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Edit Univers{% endblock %}
+{% block content %}
+    <form method="POST" class="post-form" action="/update/{{univer.name}}">
+            {% csrf_token %}
+        <div class="container">
+    <br>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <h3>Update Details</h3>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Name:</label>
+        <div class="col-sm-4">
+            <input type="text" name="name" id="id_name" required maxlength="100" value="{{ univer.name }}" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Picture:</label>
+        <div class="col-sm-4">
+            <input type="image" name="image" id="id_image" value="{{ univer.image }}" />
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Rating:</label>
+        <div class="col-sm-4">
+            <input type="number" name="rating" id="id_rating" value="{{ univer.rating }}" />
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Address:</label>
+        <div class="col-sm-4">
+            <input type="text" name="address" id="id_address" required maxlength="300" value="{{ univer.address }}" />
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Description:</label>
+        <div class="col-sm-4">
+            <input type="text" name="description" id="id_description" required maxlength="300" value="{{ univer.description }}" />
+        </div>
+      </div>
+
+         <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Specialities:</label>
+        <div class="col-sm-4">
+            <input type="checkbox" name="specialities" id="id_specialities" value="{{ univer.specialities }}" />
+        </div>
+      </div>
+
+         <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer Forms of Study:</label>
+        <div class="col-sm-4">
+            <input type="checkbox" name="form_of_study" id="id_form_of_study" value=" {{ univer.form_of_study }}" />
+        </div>
+      </div>
+
+         <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Univer News:</label>
+        <div class="col-sm-4">
+            <input type="text" name="news" id="id_news" required maxlength="300" value="{{ univer.news }}" />
+        </div>
+      </div>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <button type="submit" class="btn btn-success">Update</button>
+        </div>
+      </div>
+        </div>
+    </form>
+
+{% endblock %}

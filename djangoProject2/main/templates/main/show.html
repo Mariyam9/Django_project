@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Show Univers{% endblock %}
+{% block content %}
+
+    <table class="table table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+        <tr>
+            <th>Univer Name</th>
+            <th>Univer Picture</th>
+            <th>Univer Rating</th>
+            <th>Univer Address</th>
+            <th>Univer Description</th>
+            <th>Univer Specialities</th>
+            <th>Univer Forms of Study</th>
+            <th>Univer News</th>
+        </tr>
+        </thead>
+        <tbody>
+    {% for univer in univers %}
+        <tr>
+            <td>{{ univer.name }}</td>
+            <td>{{ univer.image }}</td>
+            <td>{{ univer.rating }}</td>
+            <td>{{ univer.address }}</td>
+            <td>{{ univer.description }}</td>
+            <td>{{ univer.specialities }}</td>
+            <td>{{ univer.form_of_study }}</td>
+            <td>{{ univer.news }}</td>
+            <td>
+                <a href="/edit/{{ univer.name }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>
+                <a href="/delete/{{ univer.name }}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <center><a href="/uni" class="btn btn-primary">Add New Record</a></center>
+
+{% endblock %}

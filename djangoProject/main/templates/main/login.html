@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="container text-center">
+    <form class="col-md-6 mx-auto mt-5" method="POST">
+        {%  csrf_token %}
+        {{ form }}
+      <h1 class="h3 mb-3 font-weight-normal">Please login</h1>
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required id="inputEmail" autofocus="">
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required id="inputPassword">
+
+        <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <p>If you don't have an account, please click <a href="{% url 'register' %}"> here </a>to registration</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <p class="mt-5 mb-3 text-muted">© 2020-2021</p>
+    </form>
+
+    </div>
+{% endblock %}
